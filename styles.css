@@ -8,10 +8,12 @@
 body {
     line-height: 1.6;
     color: #333;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    min-height: 100vh;
 }
 
 header {
-    background: #1a1a1a;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 1rem 0;
     position: fixed;
@@ -63,10 +65,11 @@ section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
 }
 
 #home {
-    background: #f4f4f4;
     text-align: center;
     padding-top: 8rem;
 }
@@ -103,7 +106,7 @@ section {
 }
 
 #about, #projects, #contact {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 h2 {
@@ -143,17 +146,21 @@ h2 {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    gap: 1rem; /* Space between form elements */
 }
 
-#contact input, #contact textarea {
-    margin-bottom: 1rem;
+#contact input,
+#contact textarea {
     padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Full width within the form */
 }
 
 #contact textarea {
     height: 150px;
+    resize: vertical; /* Allow vertical resizing */
 }
 
 #contact button {
@@ -163,6 +170,8 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: fit-content; /* Button width adjusts to content */
+    align-self: center; /* Center the button */
 }
 
 #contact button:hover {
@@ -172,7 +181,7 @@ h2 {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #1a1a1a;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
 }
 
@@ -203,5 +212,9 @@ footer {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    #contact form {
+        max-width: 100%; /* Full width on mobile */
     }
 }
