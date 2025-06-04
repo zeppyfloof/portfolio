@@ -66,7 +66,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    border-radius: 0; /* Removed curved corners */
 }
 
 #home {
@@ -109,6 +109,13 @@ section {
     background: rgba(255, 255, 255, 0.9);
 }
 
+#about p {
+    max-width: 800px; /* Limits width to encourage wrapping into a paragraph */
+    margin: 0 auto; /* Centers the paragraph */
+    text-align: left; /* Aligns text to the left for paragraph style */
+    line-height: 1.8; /* Improves readability with spacing between lines */
+}
+
 h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -146,7 +153,7 @@ h2 {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    gap: 1rem; /* Space between form elements */
+    gap: 1rem;
 }
 
 #contact input,
@@ -155,12 +162,12 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    width: 100%; /* Full width within the form */
+    width: 100%;
 }
 
 #contact textarea {
     height: 150px;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
 #contact button {
@@ -170,8 +177,8 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: fit-content; /* Button width adjusts to content */
-    align-self: center; /* Center the button */
+    width: fit-content;
+    align-self: center;
 }
 
 #contact button:hover {
@@ -214,7 +221,12 @@ footer {
         font-size: 1rem;
     }
 
-    #contact form {
+    #about p {
         max-width: 100%; /* Full width on mobile */
+        text-align: center; /* Optional: center on mobile for balance */
+    }
+
+    #contact form {
+        max-width: 100%;
     }
 }
